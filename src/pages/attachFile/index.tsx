@@ -1,7 +1,7 @@
 export function AttachFilePage() {
     return (
        <>
-          <p>lalalaaa</p>
+          <p>attach file</p>
        </>
     );
  }
