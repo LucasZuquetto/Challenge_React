@@ -28,6 +28,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     body {
         line-height: 1;
+        font-family: 'Baloo 2', cursive;
     }
     ol, ul {
         list-style: none;
