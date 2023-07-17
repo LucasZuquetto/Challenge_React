@@ -8,7 +8,15 @@ export function FormStepper() {
       "Pagamentos",
       "Contrato",
    ];
-   return <FormStepperContainer>
-    {steps.map((step, i) => <div>{i+1} {step}</div>)}
-   </FormStepperContainer>;
+   return (
+      <FormStepperContainer>
+         <div>
+            {steps.map((step, i) => (
+               <div>
+                  {i + 1} {step}
+               </div>
+            ))}
+         </div>
+      </FormStepperContainer>
+   );
 }
