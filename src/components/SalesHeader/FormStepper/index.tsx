@@ -12,7 +12,7 @@ export function FormStepper() {
       <FormStepperContainer>
          <div>
             {steps.map((step, i) => (
-               <div>
+               <div key={i}>
                   {i + 1} {step}
                </div>
             ))}
