@@ -1,14 +1,13 @@
-import { useNavigate } from "react-router-dom";
 import { ContentTitle } from "../../components/ContentTitle";
-import { Input } from "../../components/Input";
+import { Input } from "./components/Input";
 import { Line } from "../../components/Line";
 import { SalesHeader } from "../../components/SalesHeader";
 import { CustomerContainer, CustomerContent } from "./style";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { NextAndBackButtons } from "../../components/NextAndBackButtons";
 
 export function CustomerPage() {
-   const navigate = useNavigate();
    const [states, setStates] = useState([]);
    const [selectedState, setSelectedState] = useState("");
    const [cities, setCities] = useState([]);
@@ -108,12 +107,7 @@ export function CustomerPage() {
             <Line />
             <button>Atualizar</button>
             <Line />
-            <div>
-               <button onClick={() => navigate("/anexar-arquivo")}>
-                  Continuar
-               </button>
-               <button>Voltar</button>
-            </div>
+            <NextAndBackButtons urlBack={"/cliente"} urlNext="/anexar-arquivo" />
          </CustomerContent>
       </CustomerContainer>
    );
