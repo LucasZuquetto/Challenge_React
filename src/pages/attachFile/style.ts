@@ -9,4 +9,5 @@ export const AttachFileContent = styled.div`
    background-color: white;
    border-radius: 20px;
    padding: 20px 175px 20px 29px;
+   
 `;
