@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { ContentTitleContainer } from "./style";
 
 interface ContentTitleProps {
@@ -5,9 +6,10 @@ interface ContentTitleProps {
 }
 
 export function ContentTitle({ title }: ContentTitleProps) {
+   const { t } = useTranslation();
    return (
       <ContentTitleContainer>
-         <h2>{title}</h2>
+         <h2>{t(title)}</h2>
          <div></div>
       </ContentTitleContainer>
    );

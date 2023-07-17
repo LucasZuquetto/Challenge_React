@@ -6,11 +6,13 @@ import { CustomerContainer, CustomerContent } from "./style";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { NextAndBackButtons } from "../../components/NextAndBackButtons";
+import { useTranslation } from "react-i18next";
 
 export function CustomerPage() {
    const [states, setStates] = useState([]);
    const [selectedState, setSelectedState] = useState("");
    const [cities, setCities] = useState([]);
+   const { t } = useTranslation();
 
    useEffect(() => {
       axios
@@ -31,14 +33,14 @@ export function CustomerPage() {
          <SalesHeader />
          <CustomerContent>
             <ContentTitle title={"Buscar Cliente"} />
-            <span>Buscar Cliente</span>
+            <span>{t("Buscar Cliente")}</span>
             <div>
                <select name="searchPeople">
                   <option value="0">Antonio José dos Santos</option>
                   <option value="1">Lucas Zuquetto</option>
                </select>
-               <button>Buscar</button>
-               <button>Adicionar pessoas</button>
+               <button>{t("Buscar")}</button>
+               <button>{t("Adicionar pessoas")}</button>
             </div>
             <Line />
             <div>
@@ -107,7 +109,10 @@ export function CustomerPage() {
             <Line />
             <button>Atualizar</button>
             <Line />
-            <NextAndBackButtons urlBack={"/cliente"} urlNext="/anexar-arquivo" />
+            <NextAndBackButtons
+               urlBack={"/cliente"}
+               urlNext="/anexar-arquivo"
+            />
          </CustomerContent>
       </CustomerContainer>
    );
