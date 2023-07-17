@@ -7,7 +7,6 @@ export const FormStepperContainer = styled.div`
    border-radius: 20px;
    div {
       height: 100%;
-      background-color: blue;
       display: flex;
       border-radius: 20px;
       div:first-child {
@@ -18,11 +17,21 @@ export const FormStepperContainer = styled.div`
          font-weight: 700;
          color: white;
          background-color: #63d391;
-         width: 10rem;
-         border-radius: 0 20px 20px 0;
+         width: 150px;
+         border-radius: 20px;
          display: flex;
          justify-content: center;
          align-items: center;
+      }
+      @media (max-width: 1100px) {
+         div {
+            width: 13vw;
+         }
+      }
+      @media (max-width: 800px) {
+         & > div {
+            width: 18vw;
+         }
       }
    }
 `;
