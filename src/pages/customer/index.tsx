@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { ContentTitle } from "../../components/ContentTitle";
 import { Input } from "../../components/Input";
 import { Line } from "../../components/Line";
@@ -5,6 +6,8 @@ import { SalesHeader } from "../../components/SalesHeader";
 import { CustomerContainer, CustomerContent } from "./style";
 
 export function CustomerPage() {
+   const navigate = useNavigate();
+
    return (
       <CustomerContainer>
          <SalesHeader />
@@ -45,32 +48,38 @@ export function CustomerPage() {
                <div>
                   <Input label="Nacionalidade" placeholder="Brasileira" />
                </div>
-               <div>
-                  <Input label="Estado de Nascimento" placeholder="São Paulo" />
-               </div>
-               <div>
-                  <Input
-                     label="Naturalidade (Cidade de nascimento)"
-                     placeholder="São Paulo"
-                  />
-               </div>
+               <span>Estado de nascimento</span>
+               <select name="searchPeople">
+                  <option value="0">Antonio José dos Santos</option>
+                  <option value="1">Lucas Zuquetto</option>
+               </select>
+               <span>Naturalidade (Cidade de nascimento)</span>
+               <select name="searchPeople">
+                  <option value="0">Antonio José dos Santos</option>
+                  <option value="1">Lucas Zuquetto</option>
+               </select>
             </div>
             <Line />
             <div>
-               <div>
-                  <Input
-                     label="Estado civil"
-                     placeholder="Casado (a)"
-                  />
-               </div>
-               <div>
-                  <Input
-                     label="Sexo"
-                     placeholder="Masculino"
-                  />
-               </div>
+               <span>Estado civil</span>
+               <select name="searchPeople">
+                  <option value="0">Antonio José dos Santos</option>
+                  <option value="1">Lucas Zuquetto</option>
+               </select>
+
+               <span>Sexo</span>
+               <select name="searchPeople">
+                  <option value="0">Antonio José dos Santos</option>
+                  <option value="1">Lucas Zuquetto</option>
+               </select>
             </div>
             <Line />
+            <button>Atualizar</button>
+            <Line />
+            <div>
+               <button onClick={() => navigate("/anexar-arquivo")}>Continuar</button>
+               <button>Voltar</button>
+            </div>
          </CustomerContent>
       </CustomerContainer>
    );

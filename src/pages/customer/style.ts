@@ -10,19 +10,7 @@ export const CustomerContent = styled.div`
    min-height: 200px;
    border-radius: 20px;
    padding: 20px 175px 20px 29px;
-   span {
-      color: #205266;
-      font-size: 13px;
-      font-weight: 700;
-   }
-   & > div:nth-child(3) {
-      margin-top: 8px;
-      width: 100%;
-      gap: 10px;
-      display: flex;
-      justify-content: space-between;
-      height: 32px;
-      select {
+   select {
          width: 20rem;
          border: 1px solid #c6d5db;
          background: #ffffff;
@@ -35,6 +23,19 @@ export const CustomerContent = styled.div`
       select:focus {
          outline: none;
       }
+   span {
+      color: #205266;
+      font-size: 13px;
+      font-weight: 700;
+   }
+   & > div:nth-child(3) {
+      margin-top: 8px;
+      width: 100%;
+      gap: 10px;
+      display: flex;
+      justify-content: space-between;
+      height: 32px;
+      
       button {
          cursor: pointer;
          width: 80px;

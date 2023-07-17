@@ -1,8 +1,10 @@
+import { SalesHeader } from "../../components/SalesHeader";
+import { AttachFileContainer } from "./style";
+
 export function AttachFilePage() {
-    return (
-       <>
-          <p>attach file</p>
-       </>
-    );
- }
- 
+   return (
+      <AttachFileContainer>
+         <SalesHeader />
+      </AttachFileContainer>
+   );
+}
